@@ -1,0 +1,13 @@
+volumes:
+  dbData:
+services:
+  pg:
+    image: postgres
+    environment:
+      POSTGRES_USER: sample
+      POSTGRES_PASSWORD: samplePass
+      POSTGRES_DB: sampledb
+    volumes:
+      - dbData:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
