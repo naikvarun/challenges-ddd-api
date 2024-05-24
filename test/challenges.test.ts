@@ -38,7 +38,6 @@ describe("Challenges Test", () => {
     };
 
     const postResponse = await app.post(challengeUrl).send(data);
-    logger.info(postResponse);
     const getResponse = await app.get(challengeUrl);
 
     const deterministicResult = getResponse.body.map(
